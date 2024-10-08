@@ -1,45 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxdry</title>
-    <style>
-      body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-      }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxdry</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-      .full-screen-img {
-        height: 100%;
-        width: 100%;
-        background-image: url('slider-bg.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
 
-      .text-top-left {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-      }
-    </style>
+    .full-screen-img {
+      height: 100%;
+      width: 100%;
+      background-image: url('slider-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .text-top-left {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      color: white;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .text-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      line-height: 1.8;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 80%;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    }
+  </style>
 </head>
 <body>
   <div class="full-screen-img">
     <div class="text-top-left">LUXDRY</div>
+    <div class="text-center">
+      <p>Luxdry ค่ะ เป็นสินค้าคุณภาพสูง ทันสมัยใช้วัสดุชั้นดี มีประสิทธิภาพ<br>
+      ราคาอยู่ที่ประมาณ 9,999 บาทในไทยค่ะ<br>
+      เรามักจะมีโปรโมชั่นดีๆ อย่างส่วนลดพิเศษ ของแถม<br>
+      หรือผ่อน 0% ด้วยนะคะ</p>
+    </div>
   </div>
 </body>
 <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "e51678a5-0a57-4472-aa42-3d8055692a16",
-        apiHost: "https://welltilln-flowise.hf.space",
-    })
+  import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+  Chatbot.init({
+    chatflowid: "e51678a5-0a57-4472-aa42-3d8055692a16",
+    apiHost: "https://welltilln-flowise.hf.space",
+  });
 </script>
 </html>

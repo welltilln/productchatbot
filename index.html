@@ -4,25 +4,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxdry</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
 
-        .full-screen-img {
-            height: 100%;
-            width: 100%;
-            background-image: url('slider-bg.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+      .full-screen-img {
+        height: 100%;
+        width: 100%;
+        background-image: url('slider-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .text-top-left {
+        position: absolute;
+        top: 20p
+        left: 20px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+      }
     </style>
 </head>
 <body>
-  <div class="full-screen-img"></div>
+  <div class="full-screen-img">
+    <div class="text-top-left">Luxdry</div>
+  </div>
 </body>
 <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"

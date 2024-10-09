@@ -20,7 +20,7 @@
     .full-screen-img {
       height: 100%;
       width: 100%;
-      background-image: url('luxdry.png'); /* ใส่ลิงก์ภาพที่คุณต้องการ */
+      background-image: url('luxdry.png'); /* Ensure this image path is correct */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -32,7 +32,7 @@
       top: 10px;
       left: 20px;
       color: white;
-      font-size: 36px;
+      font-size: 2rem; /* Scales with screen size */
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -46,16 +46,37 @@
     }
 
     .text-box h1 {
-      font-size: 48px;
+      font-size: 3rem; /* Scales with screen size */
       margin: 0;
       font-weight: 700;
     }
 
     .text-box p {
-      font-size: 18px;
+      font-size: 1.125rem; /* Scales with screen size */
       margin-top: 10px;
       line-height: 1.6;
     }
+
+    @media only screen and (max-width: 768px) {
+      .text-box {
+        top: 20%;
+        left: 5%;
+        max-width: 90%;
+      }
+
+      .text-box h1 {
+        font-size: 2rem;
+      }
+
+      .text-box p {
+        font-size: 1rem;
+      }
+
+      .text-top-left {
+        font-size: 1.5rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -68,12 +89,13 @@
       </p>
     </div>
   </div>
-</body>
-<script type="module">
+
+  <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.init({
         chatflowid: "e51678a5-0a57-4472-aa42-3d8055692a16",
         apiHost: "https://welltilln-flowise.hf.space",
     })
-</script>
+  </script>
+</body>
 </html>
